@@ -1,7 +1,7 @@
 ---
 
 - name: Get the DNS args
-  command: "{{ paths.weave }} dns-args"
+  command: "{{ ansible_weave_paths.weave }} dns-args"
   register: result
 
 - debug: var=result.stdout

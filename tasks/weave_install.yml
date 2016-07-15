@@ -4,5 +4,5 @@
 - name: Download and Install weave
   get_url:
     url: https://git.io/weave
-    dest: "{{ paths.weave }}"
+    dest: "{{ ansible_weave_paths.weave }}"
     mode: 755

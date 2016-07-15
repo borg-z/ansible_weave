@@ -1,7 +1,7 @@
 ---
 
 - name: Prime weave
-  command: "{{ paths.weave }} prime"
+  command: "{{ ansible_weave_paths.weave }} prime"
   register: result
 
 - debug: var=result.stdout_lines

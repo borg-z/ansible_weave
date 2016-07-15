@@ -4,7 +4,7 @@
 
   # Get the ip address of the container
 - name: Get the ip address of {{ weave_name }}
-  command: "{{ paths.weave }} dns-lookup {{ weave_name }}"
+  command: "{{ ansible_weave_paths.weave }} dns-lookup {{ weave_name }}"
   register: result
 
 - debug: var=result
