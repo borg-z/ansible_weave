@@ -9,7 +9,7 @@
 
 - debug: var=result
 
-- name: Return only {{ result }}
+- name: Return only {{ result.stdout }}
   set_fact:
     weave_result: "{{ result.stdout }}"
 
