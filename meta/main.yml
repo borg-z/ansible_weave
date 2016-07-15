@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Mahesh Paolini-Subramanya (@dieswaytoofast)
+  description: Install and use weave
+  license: BSD
+  min_ansible_version: 2.
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+  galaxy_tags:
+  - cloud
+  - docker
+  - weave
+  - packaging
+  - system
+  - utilities
+dependencies: []

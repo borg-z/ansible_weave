@@ -1,0 +1,7 @@
+---
+
+paths:
+  docker: /usr/bin/docker
+  weave: /usr/local/bin/weave
+
+weave_expose: yes
