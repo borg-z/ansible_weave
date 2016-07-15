@@ -3,16 +3,15 @@
 
 
   # Get the ip address of the container
-- name: Get the containers ip address
+- name: Get the ip address of {{ weave_name }}
   command: "{{ paths.weave }} dns-lookup {{ weave_name }}"
   register: result
 
 - debug: var=result
 
-- name: Return only the item
+- name: Return only {{ weave_result }}
   set_fact:
     weave_result: "{{ result.stdout }}"
 
-- debug: var=weave_result
 
 
