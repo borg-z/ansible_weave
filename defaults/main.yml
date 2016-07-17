@@ -4,7 +4,7 @@ ansible_weave_paths:
   docker: /usr/bin/docker
   weave: /usr/local/bin/weave
 
-ansible_weave:
+ansible_weave_params:
   launch_wait: 3
 
 weave_expose: yes

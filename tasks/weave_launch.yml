@@ -21,4 +21,4 @@
 
 - name: Wait for weave to stabilize
   pause:
-    seconds: "{{ ansible_weave.launch_wait }}"
+    seconds: "{{ ansible_weave_params.launch_wait }}"
