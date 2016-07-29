@@ -21,9 +21,7 @@
 
 - name: Connect to the remote host, but only if it is pre-defined
   include: weave_connect.yml
-  vars:
-    weave_hosts: "{{ hosts_to_connect }}"
-  when: weave_connect is defined and hosts_to_connect is defined
+  when: weave_connect is defined and weave_hosts is defined
 
 - name: Prime the weave connections
   include: weave_prime.yml
