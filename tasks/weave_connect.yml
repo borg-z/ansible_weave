@@ -3,7 +3,7 @@
 - name: Connect weave to {{ item }}
   command: "{{ ansible_weave_paths.weave }} connect {{ item }}"
   when: "item != 'localhost' and inventory_hostname == 'localhost'"
-  with_items: "{{ weave_hosts }}"
+  with_items: "{{ weave_hosts | default([]) }}"
   register: result
 
 - debug: var=result
