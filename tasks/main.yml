@@ -43,6 +43,13 @@
     - weave
     - weave_expose
 
+- name: Create a custom network
+  include: weave_create_network.yml
+  when: weave_create_network is defined
+  tags:
+    - weave
+    - weave_create_network
+
 
 
 

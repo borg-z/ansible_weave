@@ -1,0 +1,7 @@
+---
+
+- name: Create a custom network for weave
+  include: roles/ansible_docker_utils/tasks/create_weave_network.yml
+  vars:
+    docker_name: "{{ weave_name }}"
+    docker_cidr: "{{ weave_cidr }}"

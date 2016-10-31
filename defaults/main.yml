@@ -8,3 +8,7 @@ ansible_weave_params:
   launch_wait: 3
 
 weave_expose: yes
+
+# For creating custom networks
+weave_name: test_net
+weave_cidr: 10.20.0.0/16
