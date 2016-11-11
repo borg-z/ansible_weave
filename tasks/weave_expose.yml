@@ -2,6 +2,12 @@
 
 - name: Expose Weave ports
   command: "{{ ansible_weave_paths.weave }} expose"
+  when: weave_expose_cidr is not defined
+  register: result
+
+- name: Expose Weave ports
+  command: "{{ ansible_weave_paths.weave }} expose {{ weave_expose_cidr }}"
+  when: weave_expose_cidr is defined
   register: result
 
 - debug: var=result.stdout_lines

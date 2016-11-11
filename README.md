@@ -15,7 +15,7 @@ Depends on the specific command being run.
 Include
    * `paths.weave`  (path to `weave` command, probably `/usr/local/bin/weave`.
    * `weave_name` (parameter passed in, probably for get_container_ip_addr.yml`
-
+   * `weave_expose_cidr` (parameter pased in, probably to expose a custom network)
 
 
 Dependencies
