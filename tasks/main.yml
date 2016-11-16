@@ -33,7 +33,7 @@
 - include: weave_docker_args.yml
   tags:
     - weave
-    - weave_argss
+    - weave_args
     - weave_docker_arg
 
 - name: Expose the weave port *again*
@@ -50,6 +50,16 @@
     - weave
     - weave_create_network
 
+- include: weave_scope_install.yml
+  when: weave_scope_install is defined
+  tags:
+    - weave
+    - install_weave_scope
 
+- include: weave_scope_launch.yml
+  when: weave_scope_launch is defined
+  tags:
+    - weave
+    - weave_scope_launch
 
 

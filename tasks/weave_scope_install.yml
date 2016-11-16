@@ -1,0 +1,8 @@
+---
+
+# Weave
+- name: Download and Install weave scope
+  get_url:
+    url: https://git.io/scope
+    dest: "{{ ansible_weave_paths.scope }}"
+    mode: 0755

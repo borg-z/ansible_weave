@@ -1,0 +1,8 @@
+---
+
+- name: Launch Weave scope
+  command: "{{ ansible_weave_paths.scope }} launch "
+  when: weave_scope_launch is defined
+  register: result
+
+- debug: var=result.stdout_lines
