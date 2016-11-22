@@ -4,5 +4,6 @@
   command: "{{ ansible_weave_paths.scope }} launch "
   when: weave_scope_launch is defined
   register: result
+  failed_when: false
 
 - debug: var=result.stdout_lines
