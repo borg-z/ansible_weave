@@ -1,65 +1,38 @@
 ---
 
 - include: weave_install.yml
-  when: weave_install is defined
-  tags:
-    - weave
-    - install_weave
+  when: weave_install
 
 - include: weave_launch.yml
-  when: weave_launch is defined
-  tags:
-    - weave
-    - weave_launch
-
+  when: weave_launch
+  
 - name: Expose the weave port
   include: weave_expose.yml
-  when: weave_expose is defined
-  tags:
-    - weave
-    - weave_expose
+  when: weave_expose
 
 - name: Connect to the remote host, but only if it is pre-defined
   include: weave_connect.yml
-  when: weave_connect is defined and weave_hosts is defined
+  when: weave_connect and weave_hosts is defined
 
 - name: Prime the weave connections
   include: weave_prime.yml
-  when: weave_prime is defined
+  when: weave_prime
   register: result
 
 - debug: var=result
 
 - include: weave_docker_args.yml
-  tags:
-    - weave
-    - weave_args
-    - weave_docker_arg
 
 - name: Expose the weave port *again*
   include: weave_expose.yml
-  when: weave_expose is defined
-  tags:
-    - weave
-    - weave_expose
+  when: weave_expose
 
 - name: Create a custom network
   include: weave_create_network.yml
-  when: weave_create_network is defined
-  tags:
-    - weave
-    - weave_create_network
+  when: weave_create_network
 
 - include: weave_scope_install.yml
-  when: weave_scope_install is defined
-  tags:
-    - weave
-    - install_weave_scope
+  when: weave_scope_install
 
 - include: weave_scope_launch.yml
-  when: weave_scope_launch is defined
-  tags:
-    - weave
-    - weave_scope_launch
-
-
+  when: weave_scope_launch

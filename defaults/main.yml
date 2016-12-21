@@ -12,3 +12,14 @@ weave_expose: yes
 # For creating custom networks
 weave_name: test_net
 weave_cidr: 10.20.0.0/16
+
+# Defaults
+
+weave_install: false
+weave_launch: false
+weave_connect: false
+weave_prime: false
+weave_expose: false
+weave_create_network: false
+weave_scope_install: false
+weave_scope_launch: false
