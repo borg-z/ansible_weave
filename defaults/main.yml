@@ -3,6 +3,7 @@
 ansible_weave_paths:
   docker: /usr/bin/docker
   weave: /usr/local/bin/weave
+  scope: /usr/local/bin/scope
 
 ansible_weave_params:
   launch_wait: 3
