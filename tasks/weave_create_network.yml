@@ -5,3 +5,5 @@
   vars:
     docker_name: "{{ weave_name }}"
     docker_cidr: "{{ weave_cidr }}"
+
+- debug: var=weave_name
