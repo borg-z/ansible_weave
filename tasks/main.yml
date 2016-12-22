@@ -5,7 +5,7 @@
 
 - include: weave_launch.yml
   when: weave_launch
-  
+
 - name: Expose the weave port
   include: weave_expose.yml
   when: weave_expose
