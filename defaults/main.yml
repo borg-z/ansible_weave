@@ -14,11 +14,11 @@ weave_expose: true
 weave_name: test_net
 weave_cidr: 10.20.0.0/16
 
-# Defaults
+weave_connect: false
+weave_create_network: false
+weave_expose_cidr: false
 weave_install: false
 weave_launch: false
-weave_connect: false
 weave_prime: false
-weave_create_network: false
 weave_scope_install: false
 weave_scope_launch: false
