@@ -2,7 +2,7 @@
 
 - name: Launch Weave scope
   command: "{{ ansible_weave_paths.scope }} launch "
-  when: weave_scope_launch is defined
+  when: weave_scope_launch
   register: result
   failed_when: false
 
