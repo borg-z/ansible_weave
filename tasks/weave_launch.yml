@@ -17,7 +17,6 @@
   when: weave_root_host is not defined
   register: result
 
-- debug: var=result.stdout_lines
 
 - name: Wait for weave to stabilize
   pause:

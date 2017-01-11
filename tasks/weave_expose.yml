@@ -10,5 +10,4 @@
   when: weave_expose_cidr is defined
   register: result
 
-- debug: var=result.stdout_lines
 

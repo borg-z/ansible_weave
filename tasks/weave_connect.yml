@@ -6,7 +6,6 @@
   with_items: "{{ weave_hosts | default([]) }}"
   register: result
 
-- debug: var=result
 - debug: msg="weave_hosts = {{ weave_hosts }}, inventory_hostname = {{ inventory_hostname }}"
 
 

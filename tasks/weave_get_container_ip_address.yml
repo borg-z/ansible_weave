@@ -7,7 +7,6 @@
   command: "{{ ansible_weave_paths.weave }} dns-lookup {{ weave_name }}"
   register: result
 
-- debug: var=result
 
 - name: Return only {{ result.stdout }}
   set_fact:

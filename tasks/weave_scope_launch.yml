@@ -5,5 +5,3 @@
   when: weave_scope_launch
   register: result
   failed_when: false
-
-- debug: var=result.stdout_lines
