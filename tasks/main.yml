@@ -19,8 +19,6 @@
   when: weave_prime
   register: result
 
-- debug: var=result
-
 - include: weave_docker_args.yml
 
 - name: Expose the weave port *again*
