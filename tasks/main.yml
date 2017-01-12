@@ -6,6 +6,10 @@
 - include: weave_launch.yml
   when: weave_launch
 
+- name: Create a custom network
+  include: weave_create_network.yml
+  when: weave_create_network
+
 - name: Expose the weave port
   include: weave_expose.yml
   when: weave_expose
@@ -25,9 +29,6 @@
   include: weave_expose.yml
   when: weave_expose
 
-- name: Create a custom network
-  include: weave_create_network.yml
-  when: weave_create_network
 
 - include: weave_scope_install.yml
   when: weave_scope_install
