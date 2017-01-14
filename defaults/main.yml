@@ -12,7 +12,7 @@ weave_expose: false
 
 # For creating custom networks
 weave_name: test_net
-weave_cidr: 10.20.0.0/16
+weave_cidr: 10.33.0.0/16
 
 weave_connect: false
 weave_create_network: false
