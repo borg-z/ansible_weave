@@ -8,7 +8,7 @@ ansible_weave_paths:
 ansible_weave_params:
   launch_wait: 3
 
-weave_expose: true
+weave_expose: false
 
 # For creating custom networks
 weave_name: test_net
