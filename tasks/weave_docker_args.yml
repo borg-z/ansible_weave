@@ -1,7 +1,7 @@
 ---
 
 - name: Get the DNS args
-  command: "{{ ansible_weave_paths.weave }} dns-args"
+  command: "{{ ansible_weave_paths_weave }} dns-args"
   register: result
 
 - name: Export Weave args for use by other services
