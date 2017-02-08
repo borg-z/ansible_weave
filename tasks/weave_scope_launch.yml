@@ -1,5 +1,12 @@
 ---
 
+- name: Stop Weave scope if it is running
+  command: "{{ ansible_weave_paths_scope }} stop "
+  when: weave_scope_launch
+  register: result
+  failed_when: false
+
+
 - name: Launch Weave scope
   command: "{{ ansible_weave_paths_scope }} launch "
   when: weave_scope_launch
